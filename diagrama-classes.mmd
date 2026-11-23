@@ -8,7 +8,8 @@ classDiagram
         -MemoriaDeCombate memoria
         +executarTurno()*
         +receberDano(int valor)
-        +estaAtivo() boolean
+        +estaAtivo() Boolean
+        +registrar(String log)
     }
     class WardenSpecter {
         +executarTurno()
@@ -17,6 +18,6 @@ classDiagram
         +executarTurno()
     }
     class MemoriaDeCombate {
-        -List~String~ registros
-        +registrarEvento(String evento)
+        -List~String~ logs
+        +registrarMemoria(String memoria)
     }
