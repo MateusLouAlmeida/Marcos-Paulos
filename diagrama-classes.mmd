@@ -1,0 +1,22 @@
+classDiagram
+    SpecterIA <|-- WardenSpecter
+    SpecterIA <|-- AssassinSpecter
+    SpecterIA *-- MemoriaDeCombate
+    class SpecterIA {
+        <<abstract>>
+        -int energia
+        -MemoriaDeCombate memoria
+        +executarTurno()*
+        +receberDano(int valor)
+        +estaAtivo() boolean
+    }
+    class WardenSpecter {
+        +executarTurno()
+    }
+    class AssassinSpecter {
+        +executarTurno()
+    }
+    class MemoriaDeCombate {
+        -List~String~ registros
+        +registrarEvento(String evento)
+    }
